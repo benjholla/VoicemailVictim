@@ -37,4 +37,4 @@ You can test by calling your Twilio phone number that you configured to point at
 
 Alternatively you can test by making GET requests to the `/call` endpoint with various `To` and `From` parameter values.
 
-Example: `https://voicemail-vicitm.herokuapp.com/call?To=15158675309&From=12223334444`
+Example: [https://voicemail-vicitm.herokuapp.com/call?To=15158675309&From=12223334444](https://voicemail-vicitm.herokuapp.com/call?To=15158675309&From=12223334444).
