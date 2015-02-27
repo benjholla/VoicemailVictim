@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/call', methods=['GET', 'POST'])
 def call():
   response = twilio.twiml.Response()
-  resp.say("Hello, the number you have called is not availble to take your call.  Please leave a message.")
+  response.say("Hello, the number you have called is not availble to take your call.  Please leave a message.")
   return str(response)
 
 @app.route('/', methods=['GET', 'POST'])
