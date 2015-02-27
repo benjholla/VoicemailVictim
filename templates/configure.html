@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Voicemail Victim - Configure</title>
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+      <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+      <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div class="container">
+        <h1>Voicemail Victim</h1>
+        <p>Success! Your <a href="https://github.com/benjholla/VoicemailVictim">Voicemail Victim</a> instance is now live. You are almost done.</p>
+        <h2>Configure Twilio</h2>
+        <p>You need to point a <a href="https://www.twilio.com/user/account/phone-numbers/incoming">Twilio phone number</a> at the <a href="/call">/call</a> endpoint of this application.</p>
+        <p>Navigate to <a href="https://www.twilio.com/user/account/phone-numbers/incoming">https://www.twilio.com/user/account/phone-numbers/incoming</a>.  Select your Twilio phone number you wish to connect to this Voicemail Victim instance.  Under <code>Voice</code> enter your Heroku application URL for the <code>/call</code> endpoint (e.g. <code>https://voicemail-vicitm.herokuapp.com/call</code>) in the <code>Request URL</code> field.  Press <code>Save</code> to apply the changes.</p>
+        <p>When this step is completed, click <a href="/">here</a>.</p>
+        <br />
+        <p>Having setup problems? Feel free to <a href="https://github.com/benjholla/VoicemailVictim/issues>VoicemailVictim">report issues</a> on Github.</p>
+       <hr>
+    </div>
+    <!-- Include page dependencies -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  </body>
+</html>

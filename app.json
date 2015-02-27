@@ -3,7 +3,7 @@
   "description": "A live (and legal) target to simulate a victim of voicemail hacking",
   "repository": "https://github.com/benjholla/VoicemailVictim",
   "logo": "https://raw.githubusercontent.com/benjholla/VoicemailVictim/master/logo.png",
-  "success_url": "/",
+  "success_url": "/configure",
   "keywords": [
     "twilio",
     "voicemail",
@@ -13,8 +13,13 @@
   ],
   "env": {
     "PASSWORD": {
-      "description": "4 digit password of victim's voicemail.",
+      "description": "4 digit password of victim's voicemail.  Leave blank for no password.",
       "value": "1234",
+      "required": false
+    }, 
+    "PROVIDER": {
+      "description": "The make-believe telephone provider of this victim (Example: \"Verizon Wireless\", "AT&T", or "Small Biz Telecom").",
+      "value": "Small Biz Telecom",
       "required": false
     }
   }

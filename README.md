@@ -28,7 +28,8 @@ Simply run the application by `python server.py`.  You can tunnel `localhost` to
     ngrok 5000
 
 ## 3) Configure
-TODO
+
+Navigate to [https://www.twilio.com/user/account/phone-numbers/incoming](https://www.twilio.com/user/account/phone-numbers/incoming).  Select your Twilio phone number you wish to connect to the Voicemail Victim web application.  Under `Voice` enter your Heroku application URL for the `/call` endpoint (e.g. `https://voicemail-vicitm.herokuapp.com/call`) in the `Request URL` field.  Press `Save` to apply the changes.
 
 ## 4) Test
 TODO
