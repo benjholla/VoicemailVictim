@@ -23,7 +23,7 @@ If you prefer to run your application locally, please make sure that you have Py
 
     pip install -r requirements.txt
 
-Simply run the application by `python server.py`.  You can tunnel `localhost` to the public Internet using `ngrok`: 
+Simply run the application by `python server.py`.  You can tunnel `localhost` to the public Internet using [ngrok](https://ngrok.com/): 
 
     ngrok 5000
 

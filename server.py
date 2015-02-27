@@ -3,7 +3,10 @@ from flask import Flask, request
 from twilio.util import TwilioCapability
 import twilio.twiml
 
+DEFAULT_PASSWORD = 1234
+
 app = Flask(__name__)
+password = os.environ.get("PASSWORD", DEFAULT_PASSWORD)
 
 @app.route('/call', methods=['GET', 'POST'])
 def call():

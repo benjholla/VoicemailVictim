@@ -5,9 +5,15 @@
   "logo": "https://raw.githubusercontent.com/benjholla/VoicemailVictim/master/logo.png",
   "keywords": [
     "twilio",
+    "voicemail",
     "hacking",
-    "simulator",
-    "victim"
+    "victim",
+    "simulator"
   ],
-  "env": {}
+  "env": {
+    "PASSWORD": {
+      "description": "Password of victim's voicemail, defaults to \"1234\" if not provided".",
+      "required": false
+    }
+  }
 }
