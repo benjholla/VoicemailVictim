@@ -7,7 +7,7 @@ Caller ID spoofing is [legal in the United States](http://www.spoofcard.com/blog
 
 Disclamer: This application is meant for educational purposes only.
 
-Utilizes Twilio TwiML to connect to a live phone number (provided by you) and Heroku's free tier webapp hosting to quickly deploy a free instance of this application.  You only need to pay for the Twilio phone usage (~1 cent per minute).
+This web application utilizes Twilio TwiML to connect to a live phone number (provided by you) and Heroku's free tier web hosting to quickly deploy a free instance of this application.  You only need to pay for a Twilio phone number (1-2 dollars per month) and its usage (1-2 cents per minute).
 
 If you want to deploy and tweak your own voicemail victim follow the steps below.  Otherwise feel free to mooch on a [pre-deployed instance](https://voicemail-victim.herokuapp.com/configure) and just point your Twilio number at it by jumping to Step 3 below.
 
