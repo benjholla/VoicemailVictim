@@ -1,0 +1,13 @@
+{
+  "name": "Voicemail Victim",
+  "description": "A live (and legal) target to simulate a victim of voicemail hacking",
+  "repository": "https://github.com/benjholla/VoicemailVictim",
+  "logo": "https://raw.githubusercontent.com/benjholla/VoicemailVictim/master/logo.png",
+  "keywords": [
+    "twilio",
+    "hacking",
+    "simulator",
+    "victim"
+  ],
+  "env": {}
+}
