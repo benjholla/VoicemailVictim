@@ -3,6 +3,10 @@ Voicemail Victim
 
 A live (and legal) target to simulate a victim of voicemail hacking.
 
+Caller ID spoofing is [legal in the United States](http://www.spoofcard.com/blog/2012/12/14/the-verdict-is-in-appeals-court-rules-non-harmful-caller-id-spoofing-is-legal/) if it is not done with "the intent to defraud, cause harm, or wrongfully obtain anything of value".
+
+Disclamer: This application is meant for educational purposes only.
+
 Utilizes Twilio TwiML to connect to a live phone number (provided by you) and Heroku's free tier webapp hosting to quickly deploy a free instance of this application.  You only need to pay for the Twilio phone usage (~1 cent per minute).
 
 If you want to deploy and tweak your own voicemail victim follow the steps below.  Otherwise feel free to mooch on a [pre-deployed instance](https://voicemail-victim.herokuapp.com/configure) and just point your Twilio number at it by jumping to Step 3 below.
