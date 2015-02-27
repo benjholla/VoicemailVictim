@@ -12,13 +12,13 @@
     "simulator"
   ],
   "env": {
-    "PASSWORD": {
-      "description": "4 digit password of victim's voicemail.  Leave blank for no password.",
+    "PASSCODE": {
+      "description": "4 digit passcode of victim's voicemail.  Leave blank for no passcode.",
       "value": "1234",
       "required": false
     }, 
     "PROVIDER": {
-      "description": "The make-believe telephone provider of this victim (Example: \"Verizon Wireless\", "AT&T", or "Small Biz Telecom").",
+      "description": "The make-believe telephone provider of this victim (Example: \"Verizon Wireless\", \"AT&T\", or \"Small Biz Telecom\").",
       "value": "Small Biz Telecom",
       "required": false
     }
