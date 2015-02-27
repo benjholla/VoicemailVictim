@@ -1,12 +1,14 @@
+from flask import Flask
+from flask import request
+from flask import render_template
+from flask import url_for
 import os
-from flask import Flask, request
-from twilio.util import TwilioCapability
 import twilio.twiml
 
 DEFAULT_PASSWORD = 1234
-
-app = Flask(__name__)
 password = os.environ.get("PASSWORD", DEFAULT_PASSWORD)
+
+app = Flask(__name__, static_url_path='/static')
 
 @app.route('/call', methods=['GET', 'POST'])
 def call():
@@ -16,9 +18,7 @@ def call():
 
 @app.route('/', methods=['GET', 'POST'])
 def welcome():
-  response = twilio.twiml.Response()
-  response.say("Voicemail Victim is live!")
-  return str(response)
+  return render_template('index.html')
 
 if __name__ == "__main__":
   port = int(os.environ.get("PORT", 5000))
