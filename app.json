@@ -12,7 +12,7 @@
   ],
   "env": {
     "PASSWORD": {
-      "description": "Password of victim's voicemail, defaults to \"1234\" if not provided".",
+      "description": "Password of victim's voicemail, defaults to \"1234\" if not provided.",
       "required": false
     }
   }
