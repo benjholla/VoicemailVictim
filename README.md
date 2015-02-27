@@ -27,7 +27,11 @@ Simply run the application by `python server.py`.  You can tunnel `localhost` to
 
     ngrok 5000
 
-To run the app in debug mode (with a stacktrace and an interactive shell on errors), export or set the environment variable `DEBUG` to `True`.  Debug mode is not suitable for production!
+To run the app in debug mode (with a stacktrace and an interactive shell on errors), export or set the environment variable `DEBUG` to `True`.
+
+`export DEBUG=True`
+
+Debug mode is not suitable for production!
 
 ## 3) Configure
 
