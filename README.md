@@ -35,7 +35,7 @@ Simply run the application by `python server.py`.  You can tunnel `localhost` to
 
 To run the app in debug mode (with a stacktrace and an interactive shell on errors), export or set the environment variable `DEBUG` to `True`.
 
-`export DEBUG=True`
+    export DEBUG=True
 
 Debug mode is not suitable for production!
 
