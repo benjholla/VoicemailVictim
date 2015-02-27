@@ -32,4 +32,9 @@ Simply run the application by `python server.py`.  You can tunnel `localhost` to
 Navigate to [https://www.twilio.com/user/account/phone-numbers/incoming](https://www.twilio.com/user/account/phone-numbers/incoming).  Select your Twilio phone number you wish to connect to the Voicemail Victim web application.  Under `Voice` enter your Heroku application URL for the `/call` endpoint (e.g. `https://voicemail-vicitm.herokuapp.com/call`) in the `Request URL` field.  Press `Save` to apply the changes.
 
 ## 4) Test
-TODO
+
+You can test by calling your Twilio phone number that you configured to point at the deployed Voicemail Victim web application instance.
+
+Alternatively you can test by making GET requests to the `/call` endpoint with various `To` and `From` parameter values.
+
+Example: `https://voicemail-vicitm.herokuapp.com/call?To=15158675309&From=12223334444`
