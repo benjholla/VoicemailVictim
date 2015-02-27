@@ -15,7 +15,7 @@ You should also [sign up](https://signup.heroku.com/) for a free Heroku account.
 
 In order for Twilio to communicate with your web application, it needs to be deployed on the public Internet.
 
-Click the button below to automatically set up the app using your Heroku account. Please enter your Twilio Account Sid, Auth token, TwiML App Sid and verified phone number when prompted.
+Click the button below to automatically set up the app using your Heroku account.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
