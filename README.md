@@ -27,6 +27,8 @@ Simply run the application by `python server.py`.  You can tunnel `localhost` to
 
     ngrok 5000
 
+To run the app in debug mode (with a stacktrace and an interactive shell on errors), export or set the environment variable `DEBUG` to `True`.  Debug mode is not suitable for production!
+
 ## 3) Configure
 
 Navigate to [https://www.twilio.com/user/account/phone-numbers/incoming](https://www.twilio.com/user/account/phone-numbers/incoming).  Select your Twilio phone number you wish to connect to the Voicemail Victim web application.  Under `Voice` enter your Heroku application URL for the `/call` endpoint (e.g. `https://voicemail-victim.herokuapp.com/call`) in the `Request URL` field.  Press `Save` to apply the changes.
