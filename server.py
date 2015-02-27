@@ -15,9 +15,12 @@ provider = os.environ.get("PROVIDER", DEFAULT_PROVIDER)
 app = Flask(__name__, static_url_path="/static")
 
 def normalize(phone):
-  chars_to_remove = ['(', ')', '-', ' ']
-  regex = '[' + re.escape(''.join(chars_to_remove)) + ']'
-  return re.sub(regex, '', phone)
+  if phone:
+    chars_to_remove = ["(", ")", "-", " "]
+    regex = "[" + re.escape("".join(chars_to_remove)) + "]"
+    return re.sub(regex, "", phone)
+  else:
+    return None
 
 @app.route("/call", methods=["GET", "POST"])
 def call():
