@@ -9,7 +9,7 @@ If you want to deploy and tweak your own voicemail victim follow the steps below
 
 ## 1) Register
 
-Please [sign up](https://www.twilio.com/try-twilio) for a free Twilio account.  In Twilio you will need to purchase a local or toll-free number.  A local number is more realistic, but toll-free lets you absorb any telephone charges a caller would normally pay by charging you a little extra per call.
+First, you should [sign up](https://www.twilio.com/try-twilio) for a free Twilio account.  In Twilio you will need to purchase a local or toll-free number.  A local number is more realistic, but toll-free lets you absorb any telephone charges a caller would normally pay by charging you a little extra per call.
 
 You should also [sign up](https://signup.heroku.com/) for a free Heroku account.
 
