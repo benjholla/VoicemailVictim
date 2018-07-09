@@ -36,7 +36,7 @@ def format_phone(phone):
 def say_phone(phone):                                                                                                                                  
   if phone:
     phone = normalize_phone(phone)
-    return ' '.join(phone[i:i+1] for i in xrange(0,len(phone),1))
+    return ' '.join(phone[i:i+1] for i in range(0,len(phone),1))
   else:
     return None
 
@@ -112,4 +112,4 @@ def index():
 
 if __name__ == "__main__":
   port = int(os.environ.get("PORT", 5000))
-  app.run(host="0.0.0.0", port=port, debug=os.environ.get("DEBUG", True))
+  app.run(host="0.0.0.0", port=port, debug=os.environ.get("DEBUG", False))
