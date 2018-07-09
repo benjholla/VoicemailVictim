@@ -72,14 +72,14 @@ def play_message(response):
 def call():
   caller = normalize_phone(request.values.get("From"))
   callee = normalize_phone(request.values.get("To"))
-  response = twilio.twiml.Response()
+  response = twilio.twiml.messaging_response.MessagingResponse()
   # if the caller is calling himself
   if caller and callee and (caller == callee):
     # login to voicemail
     login(response, callee, passcode, None)
   else:
     # caller is not calling himself, prompt for a message
-    response = twilio.twiml.Response()
+    response = twilio.twiml.messaging_response.MessagingResponse()
     response.say("Hello, the number you have called is not available to take your call.  Please leave a message after the tone.")
     response.record(maxLength="30", action="/leave-message")
   return str(response)
@@ -88,14 +88,14 @@ def call():
 def authenticate():
   passcode_entered = request.values.get('Digits', None)
   callee = normalize_phone(request.values.get("To"))
-  response = twilio.twiml.Response()
+  response = twilio.twiml.messaging_response.MessagingResponse()
   login(response, callee, passcode, passcode_entered)
   return str(response)
 
 @app.route("/leave-message", methods=["GET", "POST"])
 def leave_message():
   recording_url = request.values.get("RecordingUrl", None)
-  response = twilio.twiml.Response()
+  response = twilio.twiml.messaging_response.MessagingResponse()
   response.say("Thanks for leaving a message... if you would like to listen to the message you just left, please stay on the line.")
   response.play(recording_url)
   response.say("Goodbye.")
