@@ -4,6 +4,7 @@ from flask import render_template
 import os
 import re
 import twilio.twiml
+from twilio.twiml.voice_response import VoiceResponse
 
 # DEFAULT_PASSCODE = str(1234)
 DEFAULT_PASSCODE = None
@@ -72,14 +73,14 @@ def play_message(response):
 def call():
   caller = normalize_phone(request.values.get("From"))
   callee = normalize_phone(request.values.get("To"))
-  response = twilio.twiml.messaging_response.MessagingResponse()
+  response = VoiceResponse()
   # if the caller is calling himself
   if caller and callee and (caller == callee):
     # login to voicemail
     login(response, callee, passcode, None)
   else:
     # caller is not calling himself, prompt for a message
-    response = twilio.twiml.messaging_response.MessagingResponse()
+    response = VoiceResponse()
     response.say("Hello, the number you have called is not available to take your call.  Please leave a message after the tone.")
     response.record(maxLength="30", action="/leave-message")
   return str(response)
@@ -88,14 +89,14 @@ def call():
 def authenticate():
   passcode_entered = request.values.get('Digits', None)
   callee = normalize_phone(request.values.get("To"))
-  response = twilio.twiml.messaging_response.MessagingResponse()
+  response = VoiceResponse()
   login(response, callee, passcode, passcode_entered)
   return str(response)
 
 @app.route("/leave-message", methods=["GET", "POST"])
 def leave_message():
   recording_url = request.values.get("RecordingUrl", None)
-  response = twilio.twiml.messaging_response.MessagingResponse()
+  response = VoiceResponse()
   response.say("Thanks for leaving a message... if you would like to listen to the message you just left, please stay on the line.")
   response.play(recording_url)
   response.say("Goodbye.")
@@ -111,4 +112,4 @@ def index():
 
 if __name__ == "__main__":
   port = int(os.environ.get("PORT", 5000))
-  app.run(host="0.0.0.0", port=port, debug=os.environ.get("DEBUG", False))
+  app.run(host="0.0.0.0", port=port, debug=os.environ.get("DEBUG", True))
